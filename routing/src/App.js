@@ -3,11 +3,12 @@ import "./App.css";
 import Nav from "./nav";
 import About from "./About";
 import Shop from "./Shop";
+import ItemDetail from "./ItemDetail";
 import {BrowserRouter as Router,Route,Switch} from "react-router-dom";
 function App() {
   return (
     <Router> 
-      <div class="App">
+      <div className="App">
       
         
         <Nav />
@@ -17,7 +18,9 @@ function App() {
           <Route path="/about" component={About} />
             
           
-          <Route path="/shop" exact component={Shop} />    
+          <Route path="/shop" exact component={Shop} /> 
+
+          <Route path="/shop/:id" component={ItemDetail} />   
         </Switch>
       </div>
     </Router> 

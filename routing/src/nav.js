@@ -7,9 +7,9 @@ function Nav() {
         textDecoration:'none'
     }
   return (
-    <div class="navbar">
+    <div className="navbar">
       <h3>Logo</h3>
-      <ul class="nav-links">
+      <ul className="nav-links">
           <Link style={style} to='/about'>
             <li>About</li>
           </Link>
