@@ -11,15 +11,26 @@ function App() {
       
         
         <Nav />
-        
-        <Route path="/about" component={About} />
+        <Switch>
+          <Route path="/" exact component={Home} />
+
+          <Route path="/about" component={About} />
+            
           
-        
-        <Route path="/shop" component={Shop} />    
-      
+          <Route path="/shop" exact component={Shop} />    
+        </Switch>
       </div>
     </Router> 
   );
 }
+
+const Home=()=>(
+  
+    <div>
+      <h3>Home Page</h3>
+    </div>
+    
+  
+)
 
 export default App;
